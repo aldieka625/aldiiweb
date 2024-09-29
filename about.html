@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Saya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #f8f9fa; /* Light background */
+        }
+
+        /* About section styles */
+        #about {
+            padding: 5rem 0;
+        }
+
+        .about-title {
+            color: #ff6a00; /* Bright orange for the title */
+            font-size: 2.5rem; /* Increase title size */
+        }
+
+        .about-description {
+            color: #333; /* Dark gray for the description */
+            font-size: 1.25rem; /* Increase description size */
+            line-height: 1.6; /* Increase line height for better readability */
+        }
+
+        /* Custom navbar color */
+        .navbar-custom {
+            background: linear-gradient(to right, #ff6a00, #ee0979); /* Bright gradient */
+        }
+
+        /* Image styles */
+        .profile-img {
+            border-radius: 50%; /* Make the image circular */
+            animation: fadeIn 1s ease forwards; /* Animation for the image */
+            width: 200px; /* Set image width to 200px */
+            height: 200px; /* Set image height to 200px */
+            object-fit: cover; /* Crop image to fit the circle */
+            border: 3px solid #fff; /* Optional: add a border around the image */
+        }
+
+        /* Keyframes for fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Footer styles */
+        footer {
+            margin-top: 3rem; /* Add space above footer */
+            padding: 1rem 0; /* Add padding to footer */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand animate__animated animate__fadeInLeft" href="index.html">Selamat Datang</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">Tentang Saya</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="usaha.html">Profil Usaha</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produk.html">Produk</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tentang Saya Section -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4 mx-auto">
+                    <img src="foto/WhatsApp Image 2024-09-16 at 17.30.00.jpeg" class="profile-img img-fluid" alt="Profil Saya">
+                </div>
+                <div class="col-md-8 mx-auto">
+                    <h2 class="about-title mt-4 animate__animated animate__fadeInUp">Muhammad Aldi Eka Saputra</h2>
+                    <p class="about-description animate__animated animate__fadeInUp animate__delay-2s">Tanggal Lahir: 12-07-2003</p>
+                    <p class="about-description animate__animated animate__fadeInUp animate__delay-3s">Hobi: Main Game</p>
+                    <p class="about-description animate__animated animate__fadeInUp animate__delay-4s">Alamat: Jl. Tropodo 1 No. 63</p>
+                    <p class="about-description animate__animated animate__fadeInUp animate__delay-5s">Deskripsi: Saya seorang pengembang web dengan pengalaman baru dan ingin belajar lebih dalam mengenai berbagai bahasa pemrograman web.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3">
+        <p>&copy; 2024 Profil Aldi Eka. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
