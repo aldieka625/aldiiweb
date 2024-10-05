@@ -1,132 +1,178 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Produk</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- DataTables CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"
+    />
     <style>
-        /* Custom styles */
-        body {
-            background-color: #f8f9fa; /* Light background */
-        }
+      /* Custom styles */
+      body {
+        background-color: #f8f9fa;
+      }
 
-        /* Produk section styles */
-        #produk {
-            padding: 5rem 0;
-        }
+      /* Produk section styles */
+      #produk {
+        padding: 5rem 0;
+      }
 
-        .produk-title {
-            color: #ff6a00; /* Bright orange for the title */
-            font-size: 2.5rem; /* Increase title size */
-            margin-bottom: 2rem; /* Space below title */
-        }
+      .produk-title {
+        color: #ff6a00;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+      }
 
-        .table th, .table td {
-            text-align: center; /* Center text in the table */
-        }
+      .table th,
+      .table td {
+        text-align: center;
+      }
 
-        /* Custom navbar color */
-        .navbar-custom {
-            background: linear-gradient(to right, #ff6a00, #ee0979); /* Bright gradient */
-        }
+      .navbar-custom {
+        background: linear-gradient(to right, #ff6a00, #ee0979);
+      }
 
-        /* Image styles */
-        .product-img {
-            width: 100%; /* Make image take full width */
-            height: 250px; /* Fixed height for uniformity */
-            border-radius: 10px; /* Rounded corners for images */
-            object-fit: cover; /* Crop image to fit */
-            margin-bottom: 1.5rem; /* Space below images */
-            transition: transform 0.2s; /* Transition for animation */
-        }
+      .product-img {
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-bottom: 1.5rem;
+        transition: transform 0.2s;
+      }
 
-        .product-img:hover {
-            transform: scale(1.05); /* Scale up on hover */
-        }
+      .product-img:hover {
+        transform: scale(1.05);
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-        <div class="container-fluid">
-            <a class="navbar-brand animate__animated animate__fadeInLeft" href="index.html">Selamat Datang</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">Tentang Saya</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="usaha.html">Profil Usaha</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="produk.html">Produk</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container-fluid">
+        <a
+          class="navbar-brand animate__animated animate__fadeInLeft"
+          href="index.html"
+          >Selamat Datang</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Tentang Saya</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="usaha.html">Profil Usaha</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="produk.html">Produk</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Produk Section -->
     <section id="produk" class="py-5">
-        <div class="container text-center">
-            <h2 class="produk-title animate__animated animate__fadeInUp">Produk Kami</h2>
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <img src="foto/kopi tubkruk.jpg" class="product-img img-fluid" alt="Produk 1">
-                </div>
-                <div class="col-md-4">
-                    <img src="foto/americano.jpg" class="product-img img-fluid" alt="Produk 2">
-                </div>
-                <div class="col-md-4">
-                    <img src="foto/Kopi Latte.jpg" class="product-img img-fluid" alt="Produk 3">
-                </div>
-            </div>
-
-            <table class="table mt-4">
-                <thead>
-                    <tr>
-                        <th>Kopi</th>
-                        <th>Harga</th>
-                        <th>Kategori</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Kopi Tubruk</td>
-                        <td>Rp 25.000</td>
-                        <td>Kopi Hitam Khas</td>
-                    </tr>
-                    <tr>
-                        <td>Americano</td>
-                        <td>Rp 21.000</td>
-                        <td>Kopi Hitam</td>
-                    </tr>
-                    <tr>
-                        <td>Kopi Latte Art</td>
-                        <td>Rp 30.000</td>
-                        <td>Kopi dengan Campuran Susu</td>
-                    </tr>
-                </tbody>
-            </table>
+      <div class="container text-center">
+        
+        <h2 class="produk-title animate__animated animate__fadeInUp">
+          Produk Kami
+        </h2>
+        
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <img
+              src="foto/kopi tubkruk.jpg"
+              class="product-img img-fluid"
+              alt="Produk 1"
+            />
+          </div>
+          <div class="col-md-4">
+            <img
+              src="foto/americano.jpg"
+              class="product-img img-fluid"
+              alt="Produk 2"
+            />
+          </div>
+          <div class="col-md-4">
+            <img
+              src="foto/Kopi Latte.jpg"
+              class="product-img img-fluid"
+              alt="Produk 3"
+            />
+          </div>
         </div>
+
+        <div class="card my-3 p-3">
+          <table id="myTable" class="table mt-4">
+            <thead>
+              <tr>
+                <th>Kopi</th>
+                <th>Harga</th>
+                <th>Kategori</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kopi Tubruk</td>
+                <td>Rp 25.000</td>
+                <td>Kopi Hitam Khas</td>
+              </tr>
+              <tr>
+                <td>Americano</td>
+                <td>Rp 21.000</td>
+                <td>Kopi Hitam</td>
+              </tr>
+              <tr>
+                <td>Kopi Latte Art</td>
+                <td>Rp 30.000</td>
+                <td>Kopi dengan Campuran Susu</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center p-3">
-        <p>&copy; 2024 Profil Aldi Eka. Semua Hak Dilindungi.</p>
+      <p>&copy; 2024 Profil Aldi Eka. Semua Hak Dilindungi.</p>
     </footer>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+    <!-- Initialize DataTables -->
+    <script src="./script.js"></script>
+  </body>
 </html>
